@@ -151,10 +151,6 @@ class _LoginPageState extends State<LoginPage> {
 }
 
 Future<http.Response> getData() async {
-  // final url = Uri.parse('https://about.google/static/data/locations.json');
-
-  // Uri.parse('https://about.google/static/data/locations.json');
-
   return await http.get(Uri.parse('https://artemchudodeev.ru/check_user.php'));
 }
 
