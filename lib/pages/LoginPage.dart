@@ -20,6 +20,8 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    String? _login;
+    String? _password;
     return Scaffold(
       appBar: AppBar(
         title: Text('SVO\'ё обучение'),
@@ -76,6 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                                 BorderRadius.all(Radius.circular(10.0)),
                             borderSide: BorderSide(color: Colors.white)),
                       ),
+                      onSaved: (val) => _login = val,
                     ),
                     SizedBox(
                       height: 20,
@@ -100,6 +103,7 @@ class _LoginPageState extends State<LoginPage> {
                                 BorderRadius.all(Radius.circular(10.0)),
                             borderSide: BorderSide(color: Colors.white)),
                       ),
+                      onSaved: (val) => _password = val,
                     ),
                     SizedBox(
                       height: 100,
@@ -129,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                         overlayColor:
                             MaterialStateProperty.all(Colors.greenAccent),
                         shadowColor:
-                            MaterialStateProperty.all(Colors.grey[350]) b,
+                            MaterialStateProperty.all(Colors.grey[350]),
                       ),
                       onPressed: () {
                         Navigator.pushNamed(context, '/SignupPage');
